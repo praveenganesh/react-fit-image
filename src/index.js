@@ -32,9 +32,9 @@ box-sizing: border-box;
 `;
 
 
-function Image({imgProps,width,height,blur,borderRadius}){
+function Image({imgProps={src:''},width='',height='',blur='',borderRadius=''}){
     return (
-        <ImageWrap  src={imgProps?.src} width={width} height={height} blur={blur} borderRadius={borderRadius}>
+        <ImageWrap  src={imgProps.src} width={width} height={height} blur={blur} borderRadius={borderRadius}>
             <div/>
             <img {...imgProps}/>
         </ImageWrap>
